@@ -1,3 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: bisque;
+  background-color: #eee;
+}
+
+.to-do-list-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.to-do-list-section .container {
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.to-do-list-section .container .header {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.to-do-list-section .to-do-list-input {
+  padding: 0 1 0.5rem;
+}
+
+.to-do-list-section .to-do-list-input .add-todo {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.to-do-list-section .to-do-list-input .add-todo:focus {
+  outline: none;
+}
+
+.to-do-list-section .to-do-list .unordered-list {
+  list-style: none;
+}
+
+.to-do-list-section .to-do-list .unordered-list .to-do-list-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.to-do-list-section .to-do-list .unordered-list .to-do-list-item label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.to-do-list-section .to-do-list-footer {
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+.to-do-list-section .to-do-list-footer .btn-clear {
+  text-decoration: none;
+  color: #000;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.to-do-list-section .to-do-list-footer .btn-clear:hover {
+  text-decoration: underline;
 }
