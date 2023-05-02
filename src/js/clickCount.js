@@ -1,4 +1,4 @@
-import removeTaskFromLocalStorage from './removeTaskFromLocalStorage';
+import removeTaskFromLocalStorage from './removeTaskFromLocalStorage.js';
 
 const clickCountAction = (btn, clickCount) => {
   const icon = btn.querySelector('i');
