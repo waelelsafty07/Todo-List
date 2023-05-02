@@ -15,6 +15,14 @@ const createElement = (tag, task = undefined) => {
     if (task.completed) elements.classList.add('completed');
     return elements;
   }
+  if (tag === 'a') {
+    elements.href = '#';
+    return elements;
+  }
+  if (tag === 'i') {
+    elements.className = 'fa-solid fa-ellipsis-vertical';
+    return elements;
+  }
   return elements;
 };
 
