@@ -2,7 +2,6 @@ const createElement = (tag, task = undefined) => {
   const elements = document.createElement(tag);
   if (tag === 'li') {
     elements.className = 'to-do-list-item';
-    if (task.completed) elements.classList.add('completed');
     return elements;
   }
   if (tag === 'input') {
@@ -13,6 +12,7 @@ const createElement = (tag, task = undefined) => {
   }
   if (tag === 'span') {
     elements.innerHTML = task.description;
+    if (task.completed) elements.classList.add('completed');
     return elements;
   }
   return elements;
