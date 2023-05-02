@@ -2,12 +2,15 @@ const createElement = (tag, task = undefined) => {
   const elements = document.createElement(tag);
   if (tag === 'li') {
     elements.className = 'to-do-list-item';
+    elements.draggable = true;
     return elements;
   }
   if (tag === 'input') {
     elements.type = 'checkbox';
     elements.value = task.index;
     elements.checked = task.completed;
+    // elements.draggable = false;
+    // console.log(elements.draggable);
     return elements;
   }
   if (tag === 'span') {
