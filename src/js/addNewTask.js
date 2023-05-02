@@ -1,6 +1,7 @@
 import createTask from './createTask.js';
 import eventComplete from './eventComplete.js';
 import List from './list.js';
+import removeTask from './removeTask.js';
 
 const addNewTaskToList = () => {
   const inputToDO = document.querySelector('.add-todo');
@@ -17,6 +18,7 @@ const addNewTaskToList = () => {
       unorderdList.appendChild(createTask(task));
       inputToDO.value = '';
       eventComplete();
+      removeTask();
     }
   });
 };

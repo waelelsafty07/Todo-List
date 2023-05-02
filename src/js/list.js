@@ -13,6 +13,11 @@ class List {
     this.localStorage.setItem('lists-data', JSON.stringify(data));
   };
 
+  removeLocalStoragelistData = (index) => {
+    const data = this.getLocalStorage().filter((e) => e.index !== index);
+    return data;
+  };
+
   addTaskToList = (listDetails) => {
     const data = this.getLocalStorage();
     listDetails.index = data.length + 1;
@@ -21,8 +26,8 @@ class List {
     return listDetails;
   };
 
-  removeTaskFromList = (id) => {
-    const data = this.updateLocalStorageBookData(id);
+  removeTaskFromList = (index) => {
+    const data = this.removeLocalStoragelistData(index);
     this.setLocalStorage(data);
   };
 }
