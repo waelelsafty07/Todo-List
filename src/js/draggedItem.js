@@ -29,5 +29,4 @@ const draggedItem = () => {
     });
   });
 };
-aa
 export default draggedItem;
