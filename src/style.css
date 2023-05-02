@@ -73,3 +73,8 @@ body {
 .to-do-list-section .to-do-list-footer .btn-clear:hover {
   text-decoration: underline;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
