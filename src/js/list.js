@@ -14,19 +14,8 @@ class List {
   };
 
   getTaskByIndex = (id) => {
-    let x;
-    this.getLocalStorage().forEach((element) => {
-      let l = 1;
-      let r = this.getLocalStorage().length - 1;
-      const mid = Math.floor((l + r) / 2);
-      if (element.index === id) {
-        x = element;
-        return;
-      }
-      if (element.index < id) l = mid + 1;
-      else r = mid - 1;
-    });
-    return x;
+    const data = this.getLocalStorage().filter((e) => e.index === Number(id));
+    return data;
   };
 
   UpdateCompleteTask = (index) => {
@@ -78,6 +67,7 @@ class List {
   removeTaskFromList = (index) => {
     const data = this.removeLocalStoragelistData(index);
     this.setLocalStorage(data);
+    return data;
   };
 }
 

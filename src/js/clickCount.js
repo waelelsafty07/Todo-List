@@ -6,7 +6,7 @@ const convertTextToInput = (parent, index) => {
   const input = document.createElement('input');
   const list = new List();
   const getData = list.getTaskByIndex(Number(index));
-  if (getData.description) input.value = getData.description;
+  input.value = getData[0].description;
   input.className = 'edit-todo';
   parent.insertBefore(input, parent.firstChild);
 };
@@ -26,9 +26,13 @@ const edit = (icon, btn) => {
 };
 const deleteItem = (icon, btn) => {
   const index = btn.getAttribute('index');
-  removeTaskFromLocalStorage(index);
+  const data = removeTaskFromLocalStorage(index);
   const parent = btn.parentElement;
   parent.remove();
+  const btns = document.querySelectorAll('.btn-task');
+  btns.forEach((btn, i) => {
+    btn.setAttribute('index', data[i].index);
+  });
 };
 
 export { edit, deleteItem };
