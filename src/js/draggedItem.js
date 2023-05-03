@@ -1,4 +1,4 @@
-import List from './list';
+import List from './list.js';
 
 const draggedItem = () => {
   const list = document.getElementById('todo-list');

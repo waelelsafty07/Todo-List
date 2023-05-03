@@ -89,6 +89,7 @@ After you're finished please remove all the comments and instructions!
 - **[Removing a selected item.]**
 - **[Marking a selected item as complete.]**
 - **[Removing all items marked as complete at once.]**
+- **[Reordering a selected item (as drag-and-drop)]**
 
 <!-- LIVE DEMO -->
 
@@ -158,7 +159,7 @@ For Run server devlopment
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Reordering a selected item (as drag-and-drop)]**
+- [ ] **[Personlize todolist]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
