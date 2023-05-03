@@ -5,7 +5,6 @@ const eventComplete = () => {
   listItems.forEach((item) => {
     item.addEventListener('change', () => {
       const list = new List();
-
       const index = item.querySelector('a').getAttribute('index');
       const span = item.querySelector('span');
       if (span) {
@@ -19,4 +18,20 @@ const eventComplete = () => {
     });
   });
 };
-export default eventComplete;
+
+const addEventComplete = (item) => {
+  item.addEventListener('change', () => {
+    const list = new List();
+    const index = item.querySelector('a').getAttribute('index');
+    const span = item.querySelector('span');
+    if (span) {
+      span.classList.toggle('completed');
+      if (span.classList.contains('completed')) {
+        list.UpdateCompleteTask(Number(index));
+      } else {
+        list.UpdateUnCompleteTask(Number(index));
+      }
+    }
+  });
+};
+export { eventComplete, addEventComplete };

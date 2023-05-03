@@ -35,25 +35,23 @@ After you're finished please remove all the comments and instructions!
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 [ToDo List] <a name="about-project"></a>](#-todo-list-)
+  - [🛠 Built With <a name="HTML and CSS"></a>](#-built-with-)
+    - [Tech Stack <a name="Front end"></a>](#tech-stack-)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+  - [🚀 Live Demo <a name="https://waelelsafty07.github.io/Todo-List/dist"></a>](#-live-demo-)
+  - [💻 Getting Started <a name="getting-started"></a>](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Author <a name="authors">Wael Elsafty</a>](#-author-wael-elsafty)
+  - [🔭 Future Features <a name="future-features"></a>](#-future-features-)
+  - [🤝 Contributing <a name="contributing"></a>](#-contributing-)
+  - [⭐️ Show your support <a name="support"></a>](#️-show-your-support-)
+  - [🙏 Acknowledgments <a name="acknowledgements"></a>](#-acknowledgments-)
+  - [📝 License <a name="license"></a>](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -86,6 +84,11 @@ After you're finished please remove all the comments and instructions!
 - **[using Webpack Style/CSS Loader.]**
 - **[iterate over the tasks array and populate an HTML list item element for each task]**
 - **[in page load render the dynamically created list of tasks in the dedicated placeholder.]**
+- **[Reordering a selected item (as drag-and-drop)]**
+- **[Adding a new item.]**
+- **[Removing a selected item.]**
+- **[Marking a selected item as complete.]**
+- **[Removing all items marked as complete at once.]**
 - **[Reordering a selected item (as drag-and-drop)]**
 
 <!-- LIVE DEMO -->
@@ -156,11 +159,7 @@ For Run server devlopment
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Adding a new item.]**
-- [ ] **[Removing a selected item.]**
-- [ ] **[Marking a selected item as complete.]**
-- [ ] **[Removing all items marked as complete at once.]**
-- [ ] **[Reordering a selected item (as drag-and-drop)]**
+- [ ] **[Personlize todolist]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
