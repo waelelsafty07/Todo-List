@@ -1,17 +1,34 @@
+import editDescription from './editInLocalStorage.js';
+import List from './list.js';
 import removeTaskFromLocalStorage from './removeTaskFromLocalStorage.js';
 
-const clickCountAction = (btn, clickCount) => {
-  const icon = btn.querySelector('i');
+const convertTextToInput = (parent, index) => {
+  const input = document.createElement('input');
+  const list = new List();
+  const getData = list.getTaskByIndex(Number(index));
+  if (getData.description) input.value = getData.description;
+  input.className = 'edit-todo';
+  parent.insertBefore(input, parent.firstChild);
+};
 
-  if (clickCount === 0) {
+const edit = (icon, btn) => {
+  const index = btn.getAttribute('index');
+  if (icon.classList.contains('fa-ellipsis-vertical')) {
     icon.classList.add('fa-trash-can');
     icon.classList.remove('fa-ellipsis-vertical');
-  }
-  if (clickCount > 0 && icon.classList.contains('fa-trash-can')) {
-    const index = btn.getAttribute('index');
-    removeTaskFromLocalStorage(index);
-    const parent = btn.parentElement;
-    parent.remove();
+    const parent = icon.parentElement.parentElement;
+    if (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+      convertTextToInput(parent, index);
+      editDescription(index, icon);
+    }
   }
 };
-export default clickCountAction;
+const deleteItem = (icon, btn) => {
+  const index = btn.getAttribute('index');
+  removeTaskFromLocalStorage(index);
+  const parent = btn.parentElement;
+  parent.remove();
+};
+
+export { edit, deleteItem };

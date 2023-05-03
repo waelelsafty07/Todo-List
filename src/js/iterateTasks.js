@@ -7,7 +7,8 @@ const iterateTasks = () => {
 
   const sortedList = lists.getLocalStorage().sort((a, b) => a.index - b.index);
   sortedList.forEach((task) => {
-    unorderdList.appendChild(createTask(task));
+    const { li } = createTask(task);
+    unorderdList.appendChild(li);
   });
 };
 

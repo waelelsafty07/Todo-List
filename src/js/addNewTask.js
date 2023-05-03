@@ -1,12 +1,11 @@
 import createTask from './createTask.js';
 import eventComplete from './eventComplete.js';
 import List from './list.js';
-import removeTask from './removeTask.js';
+import { addNewActionWhenTaskAdded } from './removeTask.js';
 
 const addNewTaskToList = () => {
   const inputToDO = document.querySelector('.add-todo');
   const unorderdList = document.querySelector('.to-do-list ul');
-
   inputToDO.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       const list = new List();
@@ -15,10 +14,11 @@ const addNewTaskToList = () => {
         completed: false,
       };
       const task = list.addTaskToList(TodoList);
-      unorderdList.appendChild(createTask(task));
+      const { li, a } = createTask(task);
+      unorderdList.appendChild(li);
       inputToDO.value = '';
       eventComplete();
-      removeTask();
+      addNewActionWhenTaskAdded(a);
     }
   });
 };

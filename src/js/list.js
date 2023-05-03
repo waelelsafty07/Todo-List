@@ -13,8 +13,57 @@ class List {
     this.localStorage.setItem('lists-data', JSON.stringify(data));
   };
 
+  getTaskByIndex = (id) => {
+    let x;
+    this.getLocalStorage().forEach((element) => {
+      let l = 1;
+      let r = this.getLocalStorage().length - 1;
+      const mid = Math.floor((l + r) / 2);
+      if (element.index === id) {
+        x = element;
+        return;
+      }
+      if (element.index < id) l = mid + 1;
+      else r = mid - 1;
+    });
+    return x;
+  };
+
+  UpdateCompleteTask = (index) => {
+    const data = this.getLocalStorage();
+    data.forEach((e) => {
+      if (e.index === index) {
+        e.completed = true;
+      }
+    });
+    this.setLocalStorage(data);
+  };
+
+  UpdateUnCompleteTask = (index) => {
+    const data = this.getLocalStorage();
+    data.forEach((e) => {
+      if (e.index === index) {
+        e.completed = false;
+      }
+    });
+    this.setLocalStorage(data);
+  };
+
+  UpdateDescriptionTask = (index, value) => {
+    const data = this.getLocalStorage();
+    data.forEach((e) => {
+      if (e.index === index) {
+        e.description = value;
+      }
+    });
+    this.setLocalStorage(data);
+  };
+
   removeLocalStoragelistData = (index) => {
     const data = this.getLocalStorage().filter((e) => e.index !== index);
+    data.forEach((e, i) => {
+      e.index = i + 1;
+    });
     return data;
   };
 
