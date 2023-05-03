@@ -90,9 +90,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="https://waelelsafty07.github.io/Todo-List/"></a>
+## 🚀 Live Demo <a name="https://waelelsafty07.github.io/Todo-List/dist"></a>
 
-- [[Live Demo Link](https://waelelsafty07.github.io/Todo-List/)](#)
+- [[Live Demo Link](https://waelelsafty07.github.io/Todo-List/dist)](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

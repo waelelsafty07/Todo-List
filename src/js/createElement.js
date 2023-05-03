@@ -20,6 +20,8 @@ const createElement = (tag, task = undefined) => {
   }
   if (tag === 'a') {
     elements.href = '#';
+    elements.className = 'btn-task';
+    elements.setAttribute('index', task.index);
     return elements;
   }
   if (tag === 'i') {
