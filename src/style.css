@@ -45,6 +45,15 @@ body {
   outline: none;
 }
 
+.to-do-list-section .to-do-list-item .edit-todo {
+  border: none;
+  width: 100%;
+}
+
+.to-do-list-section .to-do-list-item .edit-todo:focus {
+  outline: none;
+}
+
 .to-do-list-section .to-do-list .unordered-list {
   list-style: none;
   cursor: move;
