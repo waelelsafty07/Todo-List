@@ -1,5 +1,5 @@
 import createTask from './createTask.js';
-import eventComplete from './eventComplete.js';
+import { addEventComplete } from './eventComplete.js';
 import List from './list.js';
 import { addNewActionWhenTaskAdded } from './removeTask.js';
 
@@ -17,7 +17,7 @@ const addNewTaskToList = () => {
       const { li, a } = createTask(task);
       unorderdList.appendChild(li);
       inputToDO.value = '';
-      eventComplete();
+      addEventComplete(li);
       addNewActionWhenTaskAdded(a);
     }
   });

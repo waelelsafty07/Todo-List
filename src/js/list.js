@@ -56,6 +56,15 @@ class List {
     return data;
   };
 
+  removeAllCompletedTask = () => {
+    const data = this.getLocalStorage().filter((e) => !e.completed);
+    data.forEach((e, i) => {
+      e.index = i + 1;
+    });
+    this.setLocalStorage(data);
+    return data;
+  };
+
   addTaskToList = (listDetails) => {
     const data = this.getLocalStorage();
     listDetails.index = data.length + 1;
