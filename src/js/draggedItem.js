@@ -1,3 +1,5 @@
+import List from './list.js';
+
 const draggedItem = () => {
   const list = document.getElementById('todo-list');
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -15,8 +17,13 @@ const draggedItem = () => {
 
   list.addEventListener('drop', (e) => {
     const dropTarget = e.target.closest('li');
-
+    const index = dropTarget.querySelector('a').getAttribute('index');
+    const index2 = draggedItem.querySelector('a').getAttribute('index');
+    const list = new List();
     if (dropTarget && draggedItem !== dropTarget) {
+      list.UpdatedIndexWhenDragItem(index, index2);
+      dropTarget.querySelector('a').setAttribute('index', index2);
+      draggedItem.querySelector('a').setAttribute('index', index);
       const temp = document.createElement('div');
       dropTarget.before(temp);
       draggedItem.before(dropTarget);

@@ -56,6 +56,30 @@ class List {
     return data;
   };
 
+  removeAllCompletedTask = () => {
+    const data = this.getLocalStorage().filter((e) => !e.completed);
+    data.forEach((e, i) => {
+      e.index = i + 1;
+    });
+    this.setLocalStorage(data);
+    return data;
+  };
+
+  UpdatedIndexWhenDragItem = (index, index2) => {
+    const data = this.getLocalStorage();
+    const index1Data = data.find((e) => e.index === Number(index));
+    const index2Data = data.find((e) => e.index === Number(index2));
+
+    if (index1Data && index2Data) {
+      const tempIndex = index1Data.index;
+      index1Data.index = index2Data.index;
+      index2Data.index = tempIndex;
+    }
+
+    this.setLocalStorage(data);
+    return data;
+  };
+
   addTaskToList = (listDetails) => {
     const data = this.getLocalStorage();
     listDetails.index = data.length + 1;
