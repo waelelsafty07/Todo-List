@@ -119,7 +119,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/waelelsafty07/Awesome-books.git
+  git clone https://github.com/waelelsafty07/Todo-List.git
 ```
 
 -
